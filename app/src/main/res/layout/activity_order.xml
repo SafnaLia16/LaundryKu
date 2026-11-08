@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/screen_bg" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:gravity="center_vertical" android:orientation="horizontal">
+        <ImageView android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp"
+            android:padding="12dp" android:src="@drawable/ic_back" app:tint="@color/primary" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="Pesan Laundry" android:textColor="@color/text_dark"
+            android:textSize="17sp" android:textStyle="bold" />
+        <Space android:layout_width="48dp" android:layout_height="1dp" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Jenis Layanan" android:textColor="@color/text_dark" android:textStyle="bold" />
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/light_blue" app:strokeWidth="1dp">
+                <Spinner android:id="@+id/spLayanan" android:layout_width="match_parent" android:layout_height="52dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="Berat Cucian (kg)"
+                android:textColor="@color/text_dark" android:textStyle="bold" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                android:layout_marginTop="8dp" android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMinus"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="64dp" android:layout_height="match_parent"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:text="−" android:textSize="22sp" />
+                <TextView android:id="@+id/tvBerat" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:background="@android:color/white" android:gravity="center"
+                    android:text="1" android:textColor="@color/text_dark" android:textSize="18sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPlus"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="64dp" android:layout_height="match_parent"
+                    android:insetTop="0dp" android:insetBottom="0dp" android:text="+" android:textSize="22sp" />
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="Catatan (Opsional)"
+                android:textColor="@color/text_dark" android:textStyle="bold" />
+            <com.google.android.material.textfield.TextInputLayout style="@style/Field"
+                android:layout_marginTop="8dp" android:hint="Contoh: pakaian putih saja...">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCatatan"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/light_blue" app:cardCornerRadius="14dp" app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Total Pembayaran" android:textColor="@color/text_dark" />
+                    <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rp 15.000" android:textColor="@color/primary" android:textSize="26sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnPesan" style="@style/Btn"
+        android:layout_margin="20dp" android:text="Pesan Sekarang" />
+</LinearLayout>

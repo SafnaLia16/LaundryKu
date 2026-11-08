@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/screen_bg" android:gravity="center_horizontal"
+    android:orientation="vertical" android:padding="28dp">
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+    <ImageView android:layout_width="220dp" android:layout_height="220dp" android:src="@drawable/ic_washer" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="28dp" android:gravity="center" android:text="Selamat Datang\ndi LaundryKu!"
+        android:textColor="@color/primary" android:textSize="28sp" android:textStyle="bold" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="14dp" android:gravity="center"
+        android:text="Kelola layanan laundry\nlebih mudah dan praktis"
+        android:textColor="@color/text_dark" android:textSize="17sp" />
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMulai" style="@style/Btn" android:text="Mulai  →" />
+</LinearLayout>
